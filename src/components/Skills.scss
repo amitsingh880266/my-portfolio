@@ -1,0 +1,116 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+.skills {
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 2rem 0;
+    text-align: left;
+
+    @include mobile {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  &__category {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    @include smooth-transition();
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(97, 218, 251, 0.1);
+    }
+  }
+
+  &__category-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $primary-color;
+    margin: 0 0 1rem 0;
+    text-align: left;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(97, 218, 251, 0.1);
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(97, 218, 251, 0.2);
+    @include smooth-transition();
+
+    &:hover {
+      background: rgba(97, 218, 251, 0.15);
+      border-color: rgba(97, 218, 251, 0.4);
+      transform: translateY(-1px);
+    }
+  }
+
+  &__icon {
+    font-size: 1rem;
+    color: $primary-color;
+  }
+
+  &__name {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+  }
+}
+
+// Light theme adjustments
+@media (prefers-color-scheme: light) {
+  .skills {
+    &__title {
+      color: rgba(33, 53, 71, 0.95);
+    }
+
+    &__category {
+      background: rgba(33, 53, 71, 0.02);
+      border-color: rgba(33, 53, 71, 0.05);
+
+      &:hover {
+        background: rgba(33, 53, 71, 0.03);
+        border-color: rgba(97, 218, 251, 0.1);
+      }
+    }
+
+    &__item {
+      background: rgba(97, 218, 251, 0.08);
+      border-color: rgba(97, 218, 251, 0.15);
+
+      &:hover {
+        background: rgba(97, 218, 251, 0.12);
+        border-color: rgba(97, 218, 251, 0.3);
+      }
+    }
+
+    &__name {
+      color: rgba(33, 53, 71, 0.9);
+    }
+  }
+}
