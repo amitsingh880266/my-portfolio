@@ -1,0 +1,42 @@
+@use "./styles/variables" as *;
+@use "./styles/mixins" as *;
+
+#root {
+  @include center-container;
+}
+
+.logo {
+  height: $logo-size;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter $transition-duration-slow;
+
+  @include logo-hover($primary-color);
+
+  &.react {
+    @include logo-hover($react-color);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite $animation-duration linear;
+  }
+}
+
+.card {
+  padding: $padding-large;
+}
+
+.read-the-docs {
+  color: $muted-text;
+}

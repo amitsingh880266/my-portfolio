@@ -1,0 +1,40 @@
+// Color palette
+$primary-color: #646cff;
+$primary-hover: #535bf2;
+$primary-light-hover: #747bff;
+$react-color: #61dafb;
+
+// Background colors
+$dark-bg: #242424;
+$light-bg: #ffffff;
+$button-dark-bg: #1a1a1a;
+$button-light-bg: #f9f9f9;
+
+// Text colors
+$dark-text: rgba(255, 255, 255, 0.87);
+$light-text: #213547;
+$muted-text: #888;
+
+// Layout
+$max-width: 1280px;
+$min-width: 320px;
+$border-radius: 8px;
+
+// Spacing
+$padding-base: 2rem;
+$padding-small: 0.6em 1.2em;
+$padding-large: 2em;
+
+// Sizes
+$logo-size: 6em;
+
+// Typography
+$font-stack: system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-size-heading: 3.2em;
+$line-height-base: 1.5;
+$line-height-heading: 1.1;
+
+// Transitions
+$transition-duration: 0.25s;
+$transition-duration-slow: 300ms;
+$animation-duration: 20s;

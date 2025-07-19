@@ -1,0 +1,68 @@
+@use "./styles/variables" as *;
+@use "./styles/mixins" as *;
+
+:root {
+  font-family: $font-stack;
+  line-height: $line-height-base;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: $dark-text;
+  background-color: $dark-bg;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: $primary-color;
+  text-decoration: inherit;
+
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: $min-width;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: $font-size-heading;
+  line-height: $line-height-heading;
+}
+
+button {
+  @include button-base;
+  background-color: $button-dark-bg;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+// Light theme media query
+@media (prefers-color-scheme: light) {
+  :root {
+    color: $light-text;
+    background-color: $light-bg;
+  }
+
+  a:hover {
+    color: $primary-light-hover;
+  }
+
+  button {
+    background-color: $button-light-bg;
+  }
+}
