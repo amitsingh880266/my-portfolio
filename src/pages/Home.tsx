@@ -108,7 +108,7 @@ const Home: React.FC = () => {
             <div className="home__section-content">
               <p>
                 Welcome to my digital space! I'm a passionate Frontend Engineer
-                with over 3 years of experience creating exceptional user
+                with over 4 years of experience creating exceptional user
                 experiences. My journey in web development started with a
                 fascination for how design and code come together to create
                 something beautiful and functional.

@@ -26,7 +26,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
     },
     {
       icon: <FaLinkedin />,
-      href: "https://linkedin.com/in/amit-singh880266",
+      href: "https://www.linkedin.com/in/amit-5642b9198",
       label: "LinkedIn",
     },
     {
