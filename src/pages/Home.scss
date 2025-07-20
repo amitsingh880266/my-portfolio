@@ -104,6 +104,55 @@
       }
     }
   }
+
+  &__scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: rgba(97, 218, 251, 0.9);
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(97, 218, 251, 0.4);
+    @include smooth-transition();
+
+    // Ensure button is clickable
+    pointer-events: auto;
+
+    // Make sure the icon is visible
+    svg {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background: rgba(97, 218, 251, 0.2);
+      border-color: $primary-color;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(97, 218, 251, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @include mobile {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 45px;
+      height: 45px;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 // Experience Items
@@ -187,6 +236,18 @@
   .home {
     &__section-content {
       color: rgba(33, 53, 71, 0.9);
+    }
+
+    &__scroll-top {
+      background: rgba(97, 218, 251, 0.05);
+      border-color: rgba(97, 218, 251, 0.15);
+      color: rgba(33, 53, 71, 0.8);
+
+      &:hover {
+        background: rgba(97, 218, 251, 0.1);
+        border-color: $primary-color;
+        color: $primary-color;
+      }
     }
   }
 
